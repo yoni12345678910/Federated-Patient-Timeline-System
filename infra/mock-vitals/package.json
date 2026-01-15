@@ -1,0 +1,13 @@
+{
+  "name": "mock-vitals-service",
+  "version": "1.0.0",
+  "description": "Mock Vitals Service with flaky behavior",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  }
+}
