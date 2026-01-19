@@ -125,6 +125,32 @@ docker-compose down
 
 The backend and frontend can be stopped with `Ctrl+C` in their respective terminals.
 
+### Testing Database Data
+
+A test script is provided to verify that all databases have been seeded correctly with the expected data:
+
+```bash
+./test.sh
+```
+
+This script will:
+- ✅ Verify PostgreSQL has the correct number of patients, surgeries, and emergency room visits
+- ✅ Verify MongoDB has the correct number of imaging studies
+- ✅ Verify the Mock Vitals Service is running and returning the expected number of vitals
+
+**Expected Results:**
+- PostgreSQL - Patients: 1
+- PostgreSQL - Surgeries: 3
+- PostgreSQL - Emergency Rooms: 2
+- MongoDB - Imaging Studies: 17
+- Mock Vitals Service - Health check: ✓ PASS
+- Mock Vitals Service - Vitals for patient 1: 22
+
+All tests should pass if the infrastructure is set up correctly. If any tests fail, check that:
+1. All Docker services are running (`docker-compose ps`)
+2. The databases have been seeded properly
+3. The Mock Vitals Service is accessible at `http://localhost:3001`
+
 ---
 
   
