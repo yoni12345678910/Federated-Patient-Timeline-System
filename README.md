@@ -97,12 +97,6 @@ The link: https://github.com/edengby/Federated-Patient-Timeline-System
 
    The backend should be run manually from the backend directory:
 
-   ```bash
-   cd backend
-   npm install  # If not already installed
-   npm run dev  # Or your preferred start command
-   ```
-
    The backend should run on port `3000` (or update the frontend's API base URL accordingly).
 
 3. **Frontend** (Already Running)
