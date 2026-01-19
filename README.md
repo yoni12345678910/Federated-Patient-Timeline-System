@@ -13,6 +13,7 @@
 **Time Investment:** ~8-10 hours
 
   
+<img width="2570" height="1440" alt="image" src="https://github.com/user-attachments/assets/79eb694c-4876-47ba-96ab-a2d65b513c9d" />
 
 ---
 
