@@ -70,6 +70,71 @@ The link: https://github.com/edengby/Federated-Patient-Timeline-System
 
   
 
+## Getting Started
+
+### Prerequisites
+
+- Docker and Docker Compose installed and running
+- Node.js (for running the backend and frontend)
+- npm or yarn package manager
+
+### How to Run the System
+
+1. **Start Infrastructure Services**
+
+   Run the provided startup script to start all infrastructure services (Postgres, MongoDB, Redis, Mock Vitals):
+
+   ```bash
+   ./start.sh
+   ```
+
+   This script will:
+   - Start all Docker services (Postgres, MongoDB, Redis, Mock Vitals, Frontend)
+   - Seed the MongoDB database
+   - Display service health status
+
+2. **Start the Backend** (Manual)
+
+   The backend should be run manually from the backend directory:
+
+   ```bash
+   cd backend
+   npm install  # If not already installed
+   npm run dev  # Or your preferred start command
+   ```
+
+   The backend should run on port `3000` (or update the frontend's API base URL accordingly).
+
+3. **Frontend** (Already Running)
+
+   The frontend is automatically started by `start.sh` via Docker Compose and will be available at `http://localhost:5173`.
+
+### Service URLs
+
+Once everything is running, the services will be available at:
+
+- **Frontend**: http://localhost:5173
+- **Backend API**: http://localhost:3000 (when backend is running)
+- **API Docs**: http://localhost:3000/docs (when backend is running)
+- **Mock Vitals Service**: http://localhost:3001
+- **Postgres**: localhost:5432
+- **MongoDB**: localhost:27017
+- **Redis**: localhost:6379
+
+### Stopping Services
+
+To stop the infrastructure services:
+
+```bash
+docker-compose down
+```
+
+The backend and frontend can be stopped with `Ctrl+C` in their respective terminals.
+
+---
+
+  
+
 ## Core Requirements
 
   
