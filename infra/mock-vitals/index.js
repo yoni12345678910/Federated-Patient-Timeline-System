@@ -94,22 +94,8 @@ const vitalsData = {
 // GET /vitals/:patientId
 app.get('/vitals/:patientId', (req, res) => {
   const patientId = parseInt(req.params.patientId);
-  
-  // 5% chance of returning 500 error (reduced from 10% to minimize warnings)
-  if (Math.random() < 0.05) {
-    return res.status(500).json({ 
-      error: 'Vitals service temporarily unavailable',
-      message: 'Internal server error'
-    });
-  }
-  
-  // Random delay between 1.5s and 2.5s
-  const delay = 1500 + Math.random() * 1000;
-  
-  setTimeout(() => {
-    const vitals = vitalsData[patientId] || [];
-    res.json(vitals);
-  }, delay);
+  const vitals = vitalsData[patientId] || [];
+  res.json(vitals);
 });
 
 app.listen(PORT, () => {

@@ -1,7 +1,7 @@
 {
   "name": "mock-vitals-service",
   "version": "1.0.0",
-  "description": "Mock Vitals Service with flaky behavior",
+  "description": "Mock Vitals Service",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
