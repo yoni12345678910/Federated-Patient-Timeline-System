@@ -2,7 +2,7 @@ import axios from 'axios';
 import { TimelineResponse } from '../types/timeline';
 
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: 'http://localhost:3000/api',
 });
 
 export const fetchTimeline = async (
