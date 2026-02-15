@@ -8,7 +8,7 @@ from models.timeline import TimelineEvent, EventType, DataSource
 
 class PacsAdapter:
     def __init__(self):
-        self.client: AsyncIOMotorClient = AsyncIOMotorClient("mongodb://localhost:27017", socketTimeoutMS=10000)
+        self.client: AsyncIOMotorClient = AsyncIOMotorClient("mongodb://mongodb:27017", socketTimeoutMS=10000)
         self.db: AsyncIOMotorDatabase = self.client["pacs"]
         self.collection: AsyncIOMotorCollection = self.db["imaging"]
 

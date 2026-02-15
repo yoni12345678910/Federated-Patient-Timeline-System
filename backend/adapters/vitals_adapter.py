@@ -9,7 +9,7 @@ from models.timeline import TimelineEvent, EventType, DataSource
 
 class VitalsAdapter:
     def __init__(self):
-        self.base_url: str = "http://localhost:3001/vitals"
+        self.base_url: str = "http://mock-vitals:3001/vitals"
 
     async def fetch_events(self, patient_id: int, start_time: datetime, end_time: datetime) -> List[TimelineEvent]:
         url: str = f"{self.base_url}/{patient_id}"

@@ -19,8 +19,10 @@ source venv/bin/activate
 pip install -r requirements.txt
 
 ### Run the API
+The api will load with the front while executing start.sh
 
-uvicorn main:app --reload --port 3000
+If you want to run the api manually execute: 
+uvicorn main:app --reload --port 3000 .
 API base URL: http://localhost:3000, Swagger UI: http://localhost:8000/docs
 
 ## Architecture Decisions

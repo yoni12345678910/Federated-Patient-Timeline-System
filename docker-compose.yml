@@ -77,6 +77,14 @@ services:
       interval: 10s
       timeout: 5s
       retries: 3
+      
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: sheebah-timeline-backend
+    ports:
+      - "3000:3000"   
 
 volumes:
   mongodb_data:

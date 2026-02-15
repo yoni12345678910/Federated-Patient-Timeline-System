@@ -10,7 +10,7 @@ from models.timeline import TimelineEvent, EventType, DataSource
 class RegistryAdapter:
     def __init__(self):
         self.database: databases.Database = databases.Database(
-            "postgresql://postgres:postgres@localhost:5432/registry?connect_timeout=5")
+            "postgresql://postgres:postgres@postgres:5432/registry?connect_timeout=5")
 
     async def fetch_events(self, patient_id: int, start_time: datetime, end_time: datetime) -> List[TimelineEvent]:
         try:
